@@ -35,75 +35,73 @@
     header {
       position: fixed;
       top: 0; left: 0; right: 0;
-      z-index: 100;
+      z-index: 1000;
       display: flex;
       flex-direction: column;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
     }
 
-    /* Barra Superior: Logo y Nombre */
+    /* Barra Superior: Blanca con Isotipo + Texto */
     .nav-top {
       background: #FFFFFF;
       display: flex;
       align-items: center;
-      padding: 0.5rem 5%;
-      border-bottom: 1px solid rgba(30, 66, 111, 0.08);
+      padding: 0.6rem 5%;
     }
 
     .brand-container {
       display: flex;
       align-items: center;
-      gap: 12px;
+      gap: 14px;
     }
 
     .brand-text {
-      color: #1E426F;
-      font-size: 1.1rem;
+      color: #1E426F; /* Tu azul oscuro corporativo */
+      font-size: 1.15rem;
       font-weight: 700;
       letter-spacing: 0.05em;
       text-transform: uppercase;
       font-family: 'Inter', sans-serif;
     }
 
-    /* Barra Inferior: Enlaces de Navegación */
+    .brand-text span {
+      font-weight: 400;
+      color: #3A91FF; /* Tu azul brillante complementario */
+    }
+
+    /* Barra Inferior: Azul Oscuro con los Enlaces */
     .nav-bottom {
       background: #1E426F;
       display: flex;
       justify-content: center;
-      padding: 0.6rem 5%;
+      padding: 0.5rem 5%;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
     }
 
     .nav-links {
       display: flex;
-      gap: 3rem;
+      gap: 3.5rem;
       list-style: none;
       align-items: center;
     }
 
     .nav-links a {
-      color: #FFFFFF;
+      color: #FFFFFF !important;
       text-decoration: none;
       font-size: 0.8rem;
       font-weight: 600;
-      letter-spacing: 0.1em;
+      letter-spacing: 0.12em;
       text-transform: uppercase;
       transition: color 0.2s ease;
     }
 
     .nav-links a:hover {
-      color: #FFE366; /* Dorado claro */
+      color: #FFE366 !important; /* Tu dorado corporativo al pasar el mouse */
     }
 
-    .nav-cta {
-      background: #3A91FF; /* Azul brillante */
-      color: #FFFFFF !important;
-      padding: 0.4rem 1.2rem;
-      border-radius: 4px;
-    }
-
-    .nav-cta:hover {
-      background: #FFE366;
-      color: #1E426F !important;
+    /* Compensación para que el Hero no se meta debajo del menú de doble altura */
+    .hero {
+      padding-top: 9.5rem !important;
     }
     /* ─── HERO ─────────────────────────────────────────────────── */
     .hero {
